@@ -1,9 +1,21 @@
 var respostasAnteriores = ''; // Variável global para armazenar as respostas anteriores
 
-function perguntaRespondida(pergunta, resposta) {
-    console.log("Resposta pergunta " + pergunta + ": " + resposta);
+function pergunta1Respondida(resposta) {
+    console.log("Resposta pergunta 1: " + resposta);
     // Armazena a resposta anterior
-    respostasAnteriores += "Pergunta " + pergunta + ": " + resposta + "<br>";
+    respostasAnteriores += "Pergunta 1: " + resposta + "<br>";
+    // Oculta a pergunta atual e mostra a próxima
+    document.getElementById('pergunta1').style.display = 'none';
+    document.getElementById('pergunta2').style.display = 'block';
+}
+
+function pergunta2Respondida(resposta) {
+    console.log("Resposta pergunta 2: " + resposta);
+    // Armazena a resposta anterior
+    respostasAnteriores += "Pergunta 2: " + resposta + "<br>";
+    // Oculta a pergunta atual e mostra a próxima
+    document.getElementById('pergunta2').style.display = 'none';
+    document.getElementById('perguntaPrincipal').style.display = 'block';
 }
 
 function sim() {
@@ -29,19 +41,14 @@ function desvia(btn) {
     btn.style.position = 'absolute';
     btn.style.top = newPositionY + 'px';
     btn.style.left = newPositionX + 'px';
-    // Efeito de "estouro"
-    btn.classList.add('estouro');
-    setTimeout(function() {
-        btn.classList.remove('estouro');
-    }, 300);
 }
 
 document.getElementById('btnNao').addEventListener('click', function() {
-    perguntaRespondida(1, 'Não');
-    desvia(this);
+    // Mostra a próxima pergunta
+    perguntaPrincipalRespondida('Não');
 });
 
 document.getElementById('btnSim').addEventListener('click', function() {
-    perguntaRespondida(1, 'Sim');
-    sim();
+    // Mostra a próxima pergunta
+    perguntaPrincipalRespondida('Sim');
 });
