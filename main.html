@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora comigo?</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="conteudo">
+        <div id="perguntas">
+            <!-- Perguntas adicionais -->
+            <div id="pergunta1">
+                <h2>Você prefere pizza ou sushi?</h2>
+                <div class="opcoes">
+                    <button class="btn" onclick="pergunta1Respondida('pizza')">Pizza</button>
+                    <button class="btn" onclick="pergunta1Respondida('sushi')">Sushi</button>
+                </div>
+            </div>
+            <div id="pergunta2" style="display: none;">
+                <h2>Qual é o seu filme favorito?</h2>
+                <div class="opcoes">
+                    <button class="btn" onclick="pergunta2Respondida('aventura')">Aventura</button>
+                    <button class="btn" onclick="pergunta2Respondida('comédia')">Comédia</button>
+                </div>
+            </div>
+            <!-- Pergunta Principal -->
+            <div id="perguntaPrincipal" style="display: none;">
+                <h2>Aceita namorar comigo?</h2>
+                <div class="opcoes">
+                    <button id="btnSim" class="btn" onclick="sim()">SIM</button>
+                    <button id="btnNao" class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="coracaoContainer"></div>
+    <script src="script.js"></script>
+</body>
+</html>
