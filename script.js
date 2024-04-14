@@ -14,12 +14,18 @@ function sim() {
     // Esconde os botões
     document.getElementById('btnSim').style.display = 'none';
     document.getElementById('btnNao').style.display = 'none';
-    // Exibe coração gigante
+    // Exibe corações ao redor da resposta
+    var resposta = document.getElementById('perguntaPrincipal').querySelector('h2').innerText;
     var coracaoContainer = document.getElementById('coracaoContainer');
-    var coracaoGigante = document.createElement('span');
-    coracaoGigante.innerHTML = '&hearts;';
-    coracaoGigante.className = 'coracaoGigante';
-    coracaoContainer.appendChild(coracaoGigante);
+    var coracao = document.createElement('span');
+    coracao.innerHTML = '&hearts;';
+    coracao.className = 'coracao';
+    coracao.style.position = 'absolute';
+    coracao.style.color = '#ff4646'; /* Coração vermelho */
+    coracao.style.fontSize = '48px';
+    coracao.style.left = 'calc(50% - 24px)';
+    coracao.style.top = 'calc(50% - 24px)';
+    coracaoContainer.appendChild(coracao);
     // Redireciona após alguns segundos
     setTimeout(function() {
         window.location.href = "https://www.youtube.com/watch?v=izGwDsrQ1eQ";
