@@ -33,10 +33,19 @@ function sim() {
 }
 
 function desvia(btn) {
-    // Move o botão para uma nova posição aleatória
+    // Move o botão para uma nova posição aleatória na tela
     var newPositionX = Math.random() * (window.innerWidth - 100);
     var newPositionY = Math.random() * (window.innerHeight - 100);
     btn.style.position = 'absolute';
     btn.style.top = newPositionY + 'px';
     btn.style.left = newPositionX + 'px';
+    // Efeito de "estouro"
+    btn.classList.add('estouro');
+    setTimeout(function() {
+        btn.classList.remove('estouro');
+    }, 300);
 }
+
+document.getElementById('btnNao').addEventListener('mouseover', function() {
+    desvia(this);
+});
