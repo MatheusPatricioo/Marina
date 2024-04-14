@@ -45,6 +45,7 @@ body {
     transition: background-color 0.3s; /* Transição suave de cor */
 }
 
+
 .btn:hover {
     background-color: #ff4646; /* Vermelho mais escuro ao passar o mouse */
 }
@@ -60,4 +61,44 @@ body {
     justify-content: center;
     align-items: center;
     pointer-events: none; /* Impede que os corações interfiram nos cliques */
+}
+
+.coracao-gigante {
+    font-size: 1200px; /* Tamanho grande para o coração */
+    color: #ff4646; /* Coração vermelho */
+    position: relative; /* Posição relativa para a sobreposição da mensagem */
+    z-index: -1; /* Coloca o coração atrás do conteúdo de texto */
+    text-align: center;
+}
+
+.coracao-gigante .mensagem {
+    position: absolute; /* Posição absoluta para a mensagem */
+    top: 50%; /* Ajusta verticalmente a mensagem para o meio */
+    left: 50%; /* Ajusta horizontalmente a mensagem para o meio */
+    transform: translate(-50%, -50%); /* Centraliza a mensagem */
+    font-size: 24px;
+    color: white;
+}
+
+
+.coracao-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px; /* Largura da caixa */
+    height: 200px; /* Altura da caixa */
+    background-color: #ff4646; /* Coração vermelho */
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.coracao-box .mensagem {
+    margin-top: 20px;
 }

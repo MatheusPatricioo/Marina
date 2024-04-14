@@ -1,30 +1,20 @@
-function pergunta1Respondida(resposta) {
-    console.log("Resposta pergunta 1: " + resposta);
-    document.getElementById('pergunta1').style.display = 'none';
-    document.getElementById('pergunta2').style.display = 'block';
-}
+var respostasAnteriores = ''; // Variável global para armazenar as respostas anteriores
 
-function pergunta2Respondida(resposta) {
-    console.log("Resposta pergunta 2: " + resposta);
-    document.getElementById('pergunta2').style.display = 'none';
-    document.getElementById('perguntaPrincipal').style.display = 'block';
+function perguntaRespondida(pergunta, resposta) {
+    console.log("Resposta pergunta " + pergunta + ": " + resposta);
+    // Armazena a resposta anterior
+    respostasAnteriores += "Pergunta " + pergunta + ": " + resposta + "<br>";
 }
 
 function sim() {
     // Esconde os botões
     document.getElementById('btnSim').style.display = 'none';
     document.getElementById('btnNao').style.display = 'none';
-    // Exibe corações ao redor da resposta
-    var resposta = document.getElementById('perguntaPrincipal').querySelector('h2').innerText;
+    // Cria um coração gigante com a mensagem de texto e respostas anteriores
     var coracaoContainer = document.getElementById('coracaoContainer');
-    var coracao = document.createElement('span');
-    coracao.innerHTML = '&hearts;';
-    coracao.className = 'coracao';
-    coracao.style.position = 'absolute';
-    coracao.style.color = '#ff4646'; /* Coração vermelho */
-    coracao.style.fontSize = '48px';
-    coracao.style.left = 'calc(50% - 24px)';
-    coracao.style.top = 'calc(50% - 24px)';
+    var coracao = document.createElement('div');
+    coracao.innerHTML = '&hearts; <span class="mensagem">Você tem um encontro marcado<br>' + respostasAnteriores + '</span>';
+    coracao.className = 'coracao-gigante';
     coracaoContainer.appendChild(coracao);
     // Redireciona após alguns segundos
     setTimeout(function() {
@@ -46,6 +36,12 @@ function desvia(btn) {
     }, 300);
 }
 
-document.getElementById('btnNao').addEventListener('mouseover', function() {
+document.getElementById('btnNao').addEventListener('click', function() {
+    perguntaRespondida(1, 'Não');
     desvia(this);
+});
+
+document.getElementById('btnSim').addEventListener('click', function() {
+    perguntaRespondida(1, 'Sim');
+    sim();
 });
