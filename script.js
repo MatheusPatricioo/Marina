@@ -35,7 +35,7 @@ function sim() {
 }
 
 function desvia(btn) {
-    // Move o botão para uma nova posição aleatória na tela
+    // Move o botão para uma nova posição aleatória na telaa.
     var newPositionX = Math.random() * (window.innerWidth - 100);
     var newPositionY = Math.random() * (window.innerHeight - 100);
     btn.style.position = 'absolute';
