@@ -52,3 +52,6 @@ document.getElementById('btnSim').addEventListener('click', function() {
     // Mostra a próxima pergunta
     perguntaPrincipalRespondida('Sim');
 });
+
+
+/* coloquei no servidor, agr falta ajustar o hover */
