@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namora comigo?</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aceita sair comigo?</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    /* Estilos apenas para tornar o botão visível */
+    .btn {
+        width: 100px;
+        height: 50px;
+        background-color: rgb(255, 62, 197);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
     <div id="conteudo">
@@ -27,11 +37,22 @@
             <h2>Aceita namorar comigo?</h2>
             <div class="opcoes">
                 <button id="btnSim" class="btn" onclick="sim()">SIM</button>
-                <button id="btnNao" class="btn" onclick="desvia(this)" onmouseover="showNao()" onmouseleave="hideNao()">NÃO</button>
+                <button id="btnNao" class="btn" onmouseover="desvia(this)" onmouseleave="hideNao()">NÃO</button>
             </div>
         </div>
     </div>
     <div id="coracaoContainer"></div>
     <script src="script.js"></script>
+    <script>
+        // Função para mover o botão "NÃO" para uma nova posição aleatória
+        function desvia(btn) {
+            // Move o botão para uma nova posição aleatória na tela
+            var newPositionX = Math.random() * (window.innerWidth - 100);
+            var newPositionY = Math.random() * (window.innerHeight - 100);
+            btn.style.position = 'absolute'; // Define a posição absoluta para poder ajustar o top e left
+            btn.style.top = newPositionY + 'px'; // Define a nova posição vertical do botão
+            btn.style.left = newPositionX + 'px'; // Define a nova posição horizontal do botão
+        }
+    </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #f7eded; /* Cor de fundo mais suave */
+    background-color: #fae6e6; /* Nova cor de fundo, mais suave */
 }
 
 #conteudo {
@@ -35,7 +35,7 @@ body {
 }
 
 .btn {
-    background-color: #ff6565; /* Vermelho mais suave */
+    background-color: #ff0033; /* Vermelho mais intenso para transmitir paixão */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -64,8 +64,8 @@ body {
 }
 
 .coracao-gigante {
-    font-size: 1200px; /* Tamanho grande para o coração */
-    color: #ff4646; /* Coração vermelho */
+    font-size: 800px; /* Reduzindo o tamanho do coração final */
+    color: #ff0033; /* Vermelho mais intenso para transmitir paixão */
     position: relative; /* Posição relativa para a sobreposição da mensagem */
     z-index: -1; /* Coloca o coração atrás do conteúdo de texto */
     text-align: center;
@@ -76,8 +76,9 @@ body {
     top: 50%; /* Ajusta verticalmente a mensagem para o meio */
     left: 50%; /* Ajusta horizontalmente a mensagem para o meio */
     transform: translate(-50%, -50%); /* Centraliza a mensagem */
-    font-size: 24px;
-    color: white;
+    font-size: 32px; /* Aumentando o tamanho da fonte para a mensagem */
+    color: #4d000f; /* Nova cor do texto, mais escura para contraste */
+    text-align: center; /* Alinhando o texto ao centro */
 }
 
 
@@ -88,7 +89,7 @@ body {
     transform: translate(-50%, -50%);
     width: 200px; /* Largura da caixa */
     height: 200px; /* Altura da caixa */
-    background-color: #ff4646; /* Coração vermelho */
+    background-color: #ff0033; /* Vermelho mais intenso para transmitir paixão */
     border-radius: 50%;
     text-align: center;
     display: flex;
