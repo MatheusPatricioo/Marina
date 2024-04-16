@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aceita sair comigo?</title>
+<title>Namora comigo?</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <style>
     /* Estilos apenas para tornar o botão visível */
@@ -19,18 +19,32 @@
 </head>
 <body>
     <div id="conteudo">
-        <div id="pergunta1" style="display: block;">
-            <h2>Você prefere pizza ou sushi?</h2>
+        <div id="pergunta2" style="display: block;">
+            <h2>Qual é a sua preferência: massa ou pizza?</h2>
             <div class="opcoes">
-                <button class="btn" onclick="pergunta1Respondida('pizza')">Pizza</button>
-                <button class="btn" onclick="pergunta1Respondida('sushi')">Sushi</button>
+                <button class="btn" onclick="pergunta2Respondida('massa')">Massa</button>
+                <button class="btn" onclick="pergunta2Respondida('Sushizinho')">Pizza</button>
             </div>
         </div>
-        <div id="pergunta2" style="display: none;">
-            <h2>Qual é o seu filme favorito?</h2>
+        <div id="pergunta1" style="display: none;">
+            <h2>Você prefere sair de dia ou de noite?</h2>
             <div class="opcoes">
-                <button class="btn" onclick="pergunta2Respondida('aventura')">Aventura</button>
-                <button class="btn" onclick="pergunta2Respondida('comédia')">Comédia</button>
+                <button class="btn" onclick="pergunta1Respondida('dia')">Dia</button>
+                <button class="btn" onclick="pergunta1Respondida('noite')">Noite</button>
+            </div>
+        </div>
+        <div id="pergunta3" style="display: none;">
+            <h2>Você prefere um date com presente misterioso ou sem presente misterioso?</h2>
+            <div class="opcoes">
+                <button class="btn" onclick="pergunta3Respondida('com presente')">Com presente</button>
+                <button class="btn" onclick="pergunta3Respondida('sem presente')">Sem presente</button>
+            </div>
+        </div>
+        <div id="pergunta4" style="display: none;">
+            <h2>Você prefere sair durante a semana ou no final de semana?</h2>
+            <div class="opcoes">
+                <button class="btn" onclick="pergunta4Respondida('semana')">Durante a semana</button>
+                <button class="btn" onclick="pergunta4Respondida('final de semana')">Final de semana</button>
             </div>
         </div>
         <div id="perguntaPrincipal" style="display: none;">
